@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue 範例</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model 作為資料與視圖的雙向綁定 -->
+       <input type="text" v-model="name" placeholder="請輸入你的名字">
+       <h1>加油好嗎 {{ name }}</h1>
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data:{
+           name: ''
+       }
+   })
+</script>
+</html>

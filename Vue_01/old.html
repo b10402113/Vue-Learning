@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <botton v-if="showBtn" v-on:click="handleClick">Click me</button>
+    </div>
+</body>
+<script>
+   new Vue({
+       el: '#app',
+       data:{
+           showBtn: true
+       },
+       methods:{
+           handleClick: function(){
+               console.log("按到了！");
+           }
+       }
+   })
+</script>
+</html>
