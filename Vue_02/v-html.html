@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue-html</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-html="link"></span>
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data: {
+           link: '<a href="#">這是一個小標籤</a>'
+       }
+   })
+</script>
+</html>

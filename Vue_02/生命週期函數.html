@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue 生命週期函數</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        Hello World
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       beforeCreate: function(){
+           console.log("beforeCreate");
+       },
+       created: function(){
+           console.log("created");
+       },
+       beforeMount: function(){
+           console.log("beforeMount");
+       },
+       // mounted後才有內容
+       mounted: function(){
+           console.log(this.$el);
+           console.log("mounted");
+       },
+       beforeDestroy: function(){
+           console.log("beforeDestroy");
+       },
+       destroyed: function(){
+           console.log("destroyed");
+       },
+   })
+app.$destroy();
+</script>
+</html>
