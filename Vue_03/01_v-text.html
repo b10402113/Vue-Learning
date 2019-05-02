@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue-text</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-html="note"></p>
+        <p v-text="note"><i></i></p>
+        <p><i>{{note}}</i></p>
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data: {
+        note: '<a href="#">來點這個連結</a>'
+       }
+   })
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue-text</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <template v-if="status == 'eng' ">
+            <p>A</p>
+            <p>B</p>
+            <p>C</p>
+        </template>
+        <template v-else-if="status == 'chinese'">
+            <p>一</p>
+            <p>二</p>
+            <p>三</p>
+        </template>
+        <template v-else>不顯示</template>
+    </div>
+</body>
+<script>
+var app = new Vue({
+ el:'#app',
+ data:{
+   status: "chinese",
+ }
+ });
+</script>
+</html>
