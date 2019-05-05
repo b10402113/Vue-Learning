@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<style>
+.red{
+    color: red;
+}
+</style>
+<body>
+    <div id="app">
+        <img v-bind:src="imgUrl" width="100px">
+        <div v-bind:class="[{active: isActive},{red: isRed}]">區塊一</div>
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data: {
+        imgUrl: 'images/1.jpg',   
+        isActive: true,
+        isRed: true,
+       }
+   })
+</script>
+</html>

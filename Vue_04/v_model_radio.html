@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        男<input type="radio" name="sex" value="男" v-model="sex">
+        女<input type="radio" name="sex" value="女" v-model="sex"> 
+        <br>
+        {{sex}}
+    </div>
+</body>
+
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            sex: ''
+        }
+    });
+</script>
+</html>
