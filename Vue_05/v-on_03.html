@@ -9,15 +9,20 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="input_val" >
-        <div>{{input_val}}</div>
+        <!-- 加入$event -->
+        <input type="button" value= "點我拜託" v-on:click = "handleClick(1,2,$event)" >
     </div>
 </body>
 <script>
 var app = new Vue({
        el: '#app',
        data: {
-        input_val: 'hello world '
+       },
+       methods:{
+           handleClick: function(num1,num2,event){
+                console.log(num1+num2);
+                console.log(event);
+           }
        }
    })
 </script>

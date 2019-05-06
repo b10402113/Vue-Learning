@@ -9,15 +9,19 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="input_val" >
-        <div>{{input_val}}</div>
+        <!-- 為click事件加入修飾符 -->
+        <a href="https://www.google.com" v-on:click.prevent="handleClick">點我</a>
     </div>
 </body>
 <script>
 var app = new Vue({
        el: '#app',
        data: {
-        input_val: 'hello world '
+       },
+       methods:{
+          handleClick: function(){
+                console.log("啥事也不會發生");
+           }
        }
    })
 </script>

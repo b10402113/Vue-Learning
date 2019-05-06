@@ -8,17 +8,11 @@
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 </head>
 <body>
-    <div id="app">
-        <input type="text" v-model="input_val" >
-        <div>{{input_val}}</div>
-    </div>
+    <a href="https://www.google.com" id="a">Google</a>
 </body>
 <script>
-var app = new Vue({
-       el: '#app',
-       data: {
-        input_val: 'hello world '
-       }
-   })
+    document.getElementById("a").onclick =function(e){
+        e.preventDefault();
+    }
 </script>
 </html>
