@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg" />
+        <div>{{msg | upper}}</div>
+
+    </div>
+</body>
+<script>
+// 定義過濾器
+Vue.filter('upper',function(val){
+    return val.charAt(0).toUpperCase() + val.slice(1);
+})
+var app = new Vue({
+       el: '#app',
+       data: {
+           msg:""
+       },
+       watch:{
+            firstName: function(val){
+                this.fullName = val + ' ' + this.lastName 
+            },
+            lastName: function(val){
+                this.fullName = this.firstName + ' ' + val
+            }
+       }
+   })
+</script>
+</html>

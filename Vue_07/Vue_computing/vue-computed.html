@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{reversMessage}}
+        {{reversMessage}}
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data: {
+           msg: 'Hello'
+       },
+       computed:{
+           reversMessage:function(){
+               console.log("翻轉句子")
+               return this.msg.split('').reverse().join('')
+           }
+       }
+   })
+</script>
+</html>

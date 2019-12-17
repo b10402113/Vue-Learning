@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span>姓：</span>
+        <span><input type="text" v-model="firstName"/></span>
+        <br/>
+        <span>名：</span>
+        <span><input type="text" v-model="lastName"/></span>
+        <div>{{fullName}}</div>
+    </div>
+</body>
+<script>
+var app = new Vue({
+       el: '#app',
+       data: {
+           firstName: '',
+           lastName: '',
+           fullName:''
+       },
+       watch:{
+            firstName: function(val){
+                this.fullName = val + ' ' + this.lastName 
+            },
+            lastName: function(val){
+                this.fullName = this.firstName + ' ' + val
+            }
+       }
+   })
+</script>
+</html>
